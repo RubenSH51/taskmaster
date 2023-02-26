@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+//import React from 'react' // rafc is the shortcut // Apparently we don't need the first line 
+import { Header } from "./components/Header"                                                    // if you're using react over v16 version
+import { Footer } from "./components/Footer"  
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Header />
+      <div>
+        <h1>Rubén</h1>
+      </div>
+      <Footer />
+    </>
+  )
 }
-
-export default App;

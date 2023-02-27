@@ -1,47 +1,27 @@
-.box
+
+.App
 {
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 3px solid black;
-    padding: 25px;
-    border-radius: 10px;
 }
 
-.box p
+h1
 {
-    font-size: 45px;
-    font-weight: bolder;
+    text-align: center;
 }
 
-.botonera
+ul
+{
+    list-style: none;
+}
+
+ul li
 {
     display: flex;
-    gap: 10px;
-    flex-direction: column;
-}
-
-.botonera button
-{
-    width: 150px;
-    height: 50px;
-    font-size: 30px;
-}
-
-.botonera .sub
-{
-    background-color: #e52e2e;
-}
-
-.botonera .add
-{
-    background-color: #2ebf2e;
-}
-
-.botonera .reset
-{
-    width: 100%;
-    background-color: #cccc25;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 25px;
+    border: 1px solid rgb(102, 101, 101);
+    padding: 10px 20px;
+    
 }

@@ -25,3 +25,16 @@ ul li
     padding: 10px 20px;
     
 }
+
+.completed
+{
+    text-decoration: line-through;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.9);
+}
+
+.incomplete
+{
+    box-shadow: 0 5px 10px rgba(250, 0, 0, 0.7),
+            -5px 0 10px rgba(250, 0, 0, 0.7),
+            5px 0 10px rgba(250, 0, 0, 0.7);
+}

@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from "react"; 
 import { Card } from "./Card"
 import { BoxCard } from './BoxCard';
+import { BoxContainer } from './BoxContainer';
+import "./tasklist.css"
 
 export const TaskList = () => {
 
@@ -33,28 +35,14 @@ export const TaskList = () => {
 
 
   return (
-    <>
-        <button onClick={() => setShow(!show)}>show</button>
+    <main>
+        <button className="toggleBTN" onClick={() => setShow(!show)}>{show ? "Hide" : "Show"}</button>
         <ul>
           {show && tasks.map((task) => (
             <Card key={ task.name} task={task} deleteTask={deleteTask}/>
           ))}
         </ul>
-        <BoxCard result="success">
-          <p className="title">Título de prueba</p>
-          <p className="description">Descripción de prueba. Como es una descripción</p> 
-        </BoxCard> 
-
-        <BoxCard result="warning">
-          <p className="title">Título de prueba</p>
-          <p className="description">Descripción de prueba. Como es una descripción</p> 
-        </BoxCard> 
-
-        <BoxCard result="danger">
-          <p className="title">Título de prueba</p>
-          <p className="description">Descripción de prueba. Como es una descripción</p> 
-        </BoxCard> 
-    
-    </>
+        <BoxContainer /> 
+    </main>
   )
 }

@@ -1,0 +1,69 @@
+
+main
+{
+    width: 70%;
+    margin: 30px auto 10px;
+    min-width: 600px;
+    position: relative;
+}
+
+.toggleBTN
+{
+    position: absolute;
+    right: 0;
+    width: 100px;
+    font-size: 2rem;
+    height: 31px;
+    border-radius: 10px;
+    outline: 3px solid #4545e6;
+    border: none;
+    background-color: transparent;
+    color: #4545e6;
+    transition: 0.2s all ease-in-out;
+    font-weight: bolder;
+}
+
+.toggleBTN:hover
+{
+    background-color: #4545e6;
+    color: white;
+    outline: none;
+}
+
+main ul
+{
+    padding: 40px 0;
+}
+
+
+
+ul
+{
+    list-style: none;
+}
+
+ul li
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 25px;
+    border: 1px solid rgb(102, 101, 101);
+    padding: 10px 20px;
+    
+}
+
+.completed
+{
+    text-decoration: line-through;
+    box-shadow: -1px 8px 16px 1px rgba(66,250,51,0.77);
+    -webkit-box-shadow: -1px 8px 16px 1px rgba(66,250,51,0.77);
+    -moz-box-shadow: -1px 8px 16px 1px rgba(66,250,51,0.77);
+}
+
+.incomplete
+{
+    box-shadow: -1px 8px 16px 1px rgba(252,40,26,0.77);
+    -webkit-box-shadow: -1px 8px 16px 1px rgba(252,40,26,0.77);
+    -moz-box-shadow: -1px 8px 16px 1px rgba(252,40,26,0.77);
+}

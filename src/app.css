@@ -1,40 +1,23 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-size: 62.5%;
+}
+
 
 .App
 {
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
 }
 
 h1
 {
     text-align: center;
-}
-
-ul
-{
-    list-style: none;
-}
-
-ul li
-{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: 25px;
-    border: 1px solid rgb(102, 101, 101);
-    padding: 10px 20px;
-    
-}
-
-.completed
-{
-    text-decoration: line-through;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.9);
-}
-
-.incomplete
-{
-    box-shadow: 0 5px 10px rgba(250, 0, 0, 0.7),
-            -5px 0 10px rgba(250, 0, 0, 0.7),
-            5px 0 10px rgba(250, 0, 0, 0.7);
 }

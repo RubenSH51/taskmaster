@@ -10,6 +10,18 @@
     margin: 0 auto;
 }
 
+.box .title
+{
+    font-size: 1.6rem;
+
+}
+
+.box .description
+{
+    font-size: 1.4rem;
+    margin: 10px 0 15px;
+}
+
 .success
 {
     background-color: rgb(121, 241, 97);
@@ -26,4 +38,24 @@
 {
     background-color: rgb(253, 117, 92);
     color: rgb(104, 30, 16);
+}
+
+.box-container button
+{
+    width: calc(50% + 30px);
+    margin: 0 auto;
+    height: 30px;
+    outline: 1px solid gray;
+    border-radius: 5px;
+    background-color: #5555ef;
+    transition: 0.2s all ease-in-out;
+    color: white;
+    font-weight: bolder;
+}
+
+.box-container button:hover
+{
+    background-color: rgb(123, 241, 202);
+    color: gray;
+    
 }

@@ -3,21 +3,18 @@ import "./app.css"
 import { useState } from "react"; 
 import { Header } from "./components/Header"
 import { TaskList } from "./components/TaskList";
+import { Footer } from "./components/Footer";
 
 
 
 export const App = () => {
 
-
   return (
 
-    
-
-
       <div className="App">
-        {/* <h1>Tasks list</h1> */}
         <Header />
         <TaskList />
+        <Footer />
       </div>
   )
 }

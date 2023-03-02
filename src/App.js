@@ -22,6 +22,8 @@ export const App = () => {
   //   completed: false}
   // ])
 
+  //localStorage.setItem("tasks",JSON.stringify(tasks))
+
 
 
   return (

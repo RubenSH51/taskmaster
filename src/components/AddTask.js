@@ -10,6 +10,7 @@ export const AddTask = ({tasks,setTasks}) => {
     {
       //console.log(e.target.value)
       setNewTask(e.target.value)
+      localStorage.setItem('tasks',JSON.stringify(newTask))
     } 
 
     function handleReset()

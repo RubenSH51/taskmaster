@@ -1,0 +1,29 @@
+.addtask
+{
+    width: 70%;
+    margin: 15px auto 15px;
+    display: flex;
+}
+
+.addtask form
+{
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    padding: 15px 54px;
+    margin: 0 auto;
+}
+
+.addtask form label
+{
+    font-size: 3rem;
+    margin-right: 10px;
+}
+
+.addtask form input
+{
+    height: 40px;
+    width: 300px;
+    padding-left: 10px;
+    font-size: 1.8rem;
+}

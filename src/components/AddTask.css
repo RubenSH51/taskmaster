@@ -3,6 +3,7 @@
     width: 70%;
     margin: 15px auto 15px;
     display: flex;
+    justify-content: center;
 }
 
 .addtask form
@@ -12,6 +13,7 @@
     border: 1px solid gray;
     padding: 15px 54px;
     margin: 0 auto;
+    gap: 10px;
 }
 
 .addtask form label
@@ -26,4 +28,55 @@
     width: 300px;
     padding-left: 10px;
     font-size: 1.8rem;
+}
+
+.addtask form select    
+{
+    height: 40px;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.addtask form button
+{
+    width: 100px;
+    height: 40px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.addtask form .reset
+{
+    background-color: transparent;
+    outline: 3px solid #b52020;
+    border: none;
+    color: #b52020;
+    transition: 0.2s all ease-in-out;
+    
+}
+
+.addtask form .reset:hover
+{
+    color: white;
+    background-color: #b52020;
+    outline: none;
+    border-radius: 10px;
+}
+
+.addtask form .addtaskBTN
+{
+    background-color: transparent;
+    outline: 3px solid rgb(32, 175, 32);
+    border: none;
+    color: rgb(32, 175, 32);
+    transition: 0.2s all ease-in-out;
+}
+
+.addtask form .addtaskBTN:hover
+{
+    color: white;
+    background-color: rgb(32, 175, 32);
+    outline: none;
+    border-radius: 10px;
 }

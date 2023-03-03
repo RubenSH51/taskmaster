@@ -1,6 +1,6 @@
  // rafc is the shortcut // Apparently we don't need the first line 
 import "./app.css"
-import { useState } from "react"; 
+import { useState,useEffect } from "react"; 
 import { Header } from "./components/Header"
 import { TaskList } from "./components/TaskList";
 import { Footer } from "./components/Footer";
@@ -9,7 +9,13 @@ import { AddTask } from "./components/AddTask";
 
 
 export const App = () => {
-  const [tasks, setTasks] = useState([])
+  const [tasks, setTasks] = useState(() => {
+    const datosAlmacenados = localStorage.getItem("tareas");
+    return datosAlmacenados ? JSON.parse(datosAlmacenados) : [];
+  });
+  useEffect(() => {
+    localStorage.setItem("tareas", JSON.stringify(tasks));
+  }, [tasks]);
   // const [tasks, setTasks] = useState([
   //   {id: 1432,
   //   name: "Watch class",

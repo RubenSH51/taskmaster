@@ -10,7 +10,7 @@ export const AddTask = ({tasks,setTasks}) => {
     {
       //console.log(e.target.value)
       setNewTask(e.target.value)
-      localStorage.setItem('tasks',JSON.stringify(newTask))
+      
     } 
 
     function handleReset()
@@ -28,8 +28,16 @@ export const AddTask = ({tasks,setTasks}) => {
         completed: Boolean(taskProgress)
       }
       console.log(task)
-      setTasks([...tasks,task])
+      //if (task.id<1000){task.id = '0'+task.id}else{task.id = task.id.toString()}
+      task.id = String(task.id).padStart(4, '0');
+      console.log(task)
+      //setTasks([...tasks,task])
+      
+
+      setTasks((tasks) => [...tasks, task]);
+
       handleReset()
+      
     }
 
 
@@ -49,8 +57,8 @@ export const AddTask = ({tasks,setTasks}) => {
               <option value={false}>Pending</option>
               <option value={true}>Completed</option>
             </select>
-            <button>Add task</button>
-            <button className="reset" type="button" onClick={handleReset}>Reset</button>
+            <button className="addtaskBTN">Add task ✔</button>
+            <button className="reset" type="button" onClick={handleReset}>Reset 🚫</button>
         </form>
     </section>
   )

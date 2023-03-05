@@ -5,10 +5,15 @@ export const AddTask = ({tasks,setTasks}) => {
 
     const [newTask, setNewTask] = useState("");
     const [taskProgress, setTaskProgress] = useState(false)
+    const [fecha,setFecha] = useState('')
+    const [time,setTime] = useState('')
 
     function handleChange(e)
     {
       setNewTask(e.target.value)
+      setFecha(() => taskDate())
+      setTime(() => taskTime())
+
     } 
 
     function handleReset()
@@ -19,6 +24,7 @@ export const AddTask = ({tasks,setTasks}) => {
 
     function handleSubmit(e)
     {
+      
       e.preventDefault();
       if (newTask.length<2)
       {
@@ -30,7 +36,9 @@ export const AddTask = ({tasks,setTasks}) => {
       const task = {
         id: Math.floor(Math.random()*10000),
         name: newTask,
-        completed: Boolean(taskProgress)
+        completed: Boolean(taskProgress),
+        date: fecha,
+        time: time,
       }
       console.log(task)
       //if (task.id<1000){task.id = '0'+task.id}else{task.id = task.id.toString()}
@@ -43,6 +51,29 @@ export const AddTask = ({tasks,setTasks}) => {
 
       handleReset()
       
+    }
+
+
+
+    
+    function taskDate()
+    {
+      let fecha = new Date();
+  
+      let fechaActual = fecha.getDate().toString().padStart(2,0) + "/" + 
+      Number(fecha.getMonth()+1).toString().padStart(2,0)+"/"+fecha.getFullYear()
+  
+  
+      return fechaActual
+    }
+
+    function taskTime()
+    {
+      let fecha = new Date();
+      let horaActual = fecha.getHours().toString().padStart(2,0)+":"+
+      fecha.getMinutes().toString().padStart(2,0)+":"+fecha.getSeconds().toString().padStart(2,0)
+  
+      return horaActual
     }
 
 

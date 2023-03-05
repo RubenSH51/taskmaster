@@ -50,6 +50,7 @@ ul
 ul li
 {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin-bottom: 10px;
     font-size: 25px;
@@ -58,6 +59,30 @@ ul li
 
 }
 
+ul li > div:nth-child(1)
+{
+    display: flex;
+    justify-content: space-between;
+    grid-area: b;
+}
+
+ul li > div:nth-child(1) span
+{
+    cursor:pointer;
+}
+
+ul li > div:nth-child(2)
+{
+    display: flex;
+    grid-area: a;
+    /* gap: 10px; */
+}
+
+ul li > div:nth-child(2) p
+{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
 
 .taskDisplayingTitle
 {
@@ -121,9 +146,26 @@ ul li
     main ul li
     {
         height: 140px;
-        display: flex;
+        /* display: flex;
         flex-direction: column;
-        padding: 20px;
+        padding: 20px; */
+
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4,1fr);
+        grid-template-areas:
+            ". . a"
+            "b b b"
+            "b b b"
+            ". . .";
+        /* gap: 2px; */
+        padding: 5px 10px 0 10px;
+    }
+
+    main ul li .li-upper
+    {
+        flex-direction: column;
+        gap:10px;
     }
 }
 

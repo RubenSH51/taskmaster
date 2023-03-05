@@ -10,6 +10,10 @@ html
     font-size: 62.5%;
 }
 
+button, select, img
+{
+  cursor: pointer;
+}
 
 .App
 {

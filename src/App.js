@@ -16,28 +16,27 @@ export const App = () => {
   useEffect(() => {
     localStorage.setItem("tareas", JSON.stringify(tasks));
   }, [tasks]);
-  // const [tasks, setTasks] = useState([
-  //   {id: 1432,
-  //   name: "Watch class",
-  //   completed: false},
-  //   {id: 2453,
-  //   name: "Become a pro",
-  //   completed: true},
-  //   {id: 3975,
-  //   name: "Make courses",
-  //   completed: false}
-  // ])
+ 
 
-  //localStorage.setItem("tasks",JSON.stringify(tasks))
+  function handleTaskStatusChange(updatedTask) {
+    const updatedTasks = tasks.map((task) => {
+      if (task.id === updatedTask.id) {
+        return updatedTask;
+      } else {
+        return task;
+      }
+    });
+    setTasks(updatedTasks);
+  }
 
-
+ 
 
   return (
 
       <div className="App">
         <Header />
         <AddTask  tasks={tasks} setTasks={setTasks}/>
-        <TaskList tasks={tasks} setTasks={setTasks}/>
+        <TaskList tasks={tasks} setTasks={setTasks} onTaskStatusChange={handleTaskStatusChange}/>
         <Footer />
       </div>
   )

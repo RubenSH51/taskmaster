@@ -21,3 +21,21 @@ h1
 {
     text-align: center;
 }
+
+
+/* Modo claro */
+body.modo-claro {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  /* Modo oscuro */
+  body.modo-oscuro {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  body
+  {
+    transition: background-color 0.5s ease;
+  }

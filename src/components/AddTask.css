@@ -4,6 +4,7 @@
     margin: 15px auto 15px;
     display: flex;
     justify-content: center;
+    /* min-width: 775px; */
 }
 
 .addtask form
@@ -16,11 +17,18 @@
     gap: 10px;
 }
 
-.addtask form label
+.addtask form label 
 {
     font-size: 3rem;
     margin-right: 10px;
 }
+
+.addtask form div
+{
+    display: flex;
+    gap: 10px;
+}
+
 
 .addtask form input
 {
@@ -36,6 +44,20 @@
     padding: 10px;
     font-size: 1.5rem;
     font-weight: bolder;
+
+    background-color: transparent;
+    outline: 3px solid #9fc205;
+    border: none;
+    color: #9fc205  ;
+    transition: 0.2s all ease-in-out;
+}
+
+.addtask form select:hover
+{
+    color: white;
+    background-color: #9fc205;
+    outline: none;
+    border-radius: 10px;
 }
 
 .addtask form button
@@ -79,4 +101,13 @@
     background-color: rgb(32, 175, 32);
     outline: none;
     border-radius: 10px;
+}
+
+
+@media (max-width: 870px)
+{
+    .addtask form
+    {
+        flex-direction: column;
+    }
 }

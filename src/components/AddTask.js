@@ -29,7 +29,7 @@ export const AddTask = ({tasks,setTasks}) => {
       }
       console.log(task)
       //if (task.id<1000){task.id = '0'+task.id}else{task.id = task.id.toString()}
-      task.id = String(task.id).padStart(4, '0');
+      task.id = String(task.id).padStart(4, '0'); // Punto para chatGPT
       console.log(task)
       //setTasks([...tasks,task])
       
@@ -53,12 +53,14 @@ export const AddTask = ({tasks,setTasks}) => {
             {/* <label htmlFor='task'>Task name:</label> */}
             <input id="task" name="task" autoComplete='off'  placeholder='new task' onChange={handleChange} value={newTask}/>
             
-            <select onChange={(event) => setTaskProgress(event.target.value) } value={taskProgress}>
-              <option value={false}>Pending</option>
-              <option value={true}>Completed</option>
-            </select>
-            <button className="addtaskBTN">Add task ✔</button>
-            <button className="reset" type="button" onClick={handleReset}>Reset 🚫</button>
+            <div>
+              <select onChange={(event) => setTaskProgress(event.target.value) } value={taskProgress}>
+                <option value={false}>Pending ⌛</option>
+                <option value={true}>Completed ✅</option>
+              </select>
+              <button className="addtaskBTN">Add task ✔</button>
+              <button className="reset" type="button" onClick={handleReset}>Reset 🚫</button>
+            </div>
         </form>
     </section>
   )

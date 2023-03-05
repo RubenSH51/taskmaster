@@ -3,7 +3,8 @@ main
 {
     width: 70%;
     margin: 30px auto 10px;
-    min-width: 600px;
+    /* min-width: 600px; */
+    max-width: 700px;
     position: relative;
 }
 
@@ -59,6 +60,8 @@ ul li
     box-shadow: -1px 8px 16px 1px rgba(66,250,51,0.77);
     -webkit-box-shadow: -1px 8px 16px 1px rgba(66,250,51,0.77);
     -moz-box-shadow: -1px 8px 16px 1px rgba(66,250,51,0.77);
+    color: rgb(53, 52, 52);
+
 }
 
 .incomplete
@@ -66,4 +69,33 @@ ul li
     box-shadow: -1px 8px 16px 1px rgba(252,40,26,0.77);
     -webkit-box-shadow: -1px 8px 16px 1px rgba(252,40,26,0.77);
     -moz-box-shadow: -1px 8px 16px 1px rgba(252,40,26,0.77);
+}
+
+
+
+
+.tasksFilterButtonContainer
+{
+    display: flex;
+    gap:10px;
+}
+
+.tasksFilterButton
+{
+    background-color: transparent;
+    border: none;
+    transition: 0.2s all ease-in-out;
+    height: 30px;
+    width: 90px;
+    outline: 3px solid rgb(206, 101, 16);
+    color: rgb(206, 101, 16);
+    font-weight: bold;
+}
+
+.tasksFilterButton:hover
+{
+    color: white;
+    background-color: rgb(206, 101, 16);
+    outline: none;
+    border-radius: 10px;
 }

@@ -35,3 +35,8 @@ header h1
     padding: 15px 0;
     color: #0c8239;
 }
+
+.darkModeLogo
+{
+    filter: invert(100%);
+}

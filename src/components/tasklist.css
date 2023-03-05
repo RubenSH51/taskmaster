@@ -1,7 +1,7 @@
 
 main
 {
-    width: 70%;
+    width: 90%;
     margin: 30px auto 10px;
     /* min-width: 600px; */
     max-width: 700px;
@@ -22,6 +22,9 @@ main
     color: #4545e6;
     transition: 0.2s all ease-in-out;
     font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .toggleBTN:hover
@@ -41,6 +44,7 @@ main ul
 ul
 {
     list-style: none;
+    /* min-width: 600px; */
 }
 
 ul li
@@ -51,8 +55,16 @@ ul li
     font-size: 25px;
     border: 1px solid rgb(102, 101, 101);
     padding: 10px 20px;
-    
+
 }
+
+
+.taskDisplayingTitle
+{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
 
 .completed
 {
@@ -72,9 +84,12 @@ ul li
 }
 
 
-
-
 .tasksFilterButtonContainer
+{
+    display: flex;
+}
+
+.tasksFilterButtonContainer-upper
 {
     display: flex;
     gap:10px;
@@ -98,4 +113,44 @@ ul li
     background-color: rgb(206, 101, 16);
     outline: none;
     border-radius: 10px;
+}
+
+
+@media (max-width: 750px)
+{
+    main ul li
+    {
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 520px)
+{
+    .tasksFilterButtonContainer
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+    .tasksFilterButtonContainer-lower 
+    {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .tasksFilterButtonContainer-lower .toggleBTN
+    {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 290px;
+    }
+    
 }

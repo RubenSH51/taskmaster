@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import Logo from "../assets/logo.png"
 import Moon from "../assets/moon.png"
 import Moon2 from "../assets/moon2.png"
@@ -9,33 +9,50 @@ import "./header.css"
 export const Header = () => {
 
   const lightDarkMode = document.querySelector('.lightDarkMode');
-  //const [modeIcon, setModeIcon] = useState(Moon);
-  const [modoOscuro, setModoOscuro] = useState(false);
 
-  function cambiarModo() {
-    let body = document.getElementsByTagName("body")[0];
-    if (body.classList.contains("modo-claro")) {
-      body.classList.remove("modo-claro");
+
+  const [modoOscuro, setModoOscuro] = useState(() => {
+    const modoGuardado = localStorage.getItem("modoOscuro");
+    return modoGuardado ? JSON.parse(modoGuardado) : false;
+  });
+  useEffect(() => {
+    localStorage.setItem("modoOscuro", JSON.stringify(modoOscuro));
+    const body = document.getElementsByTagName("body")[0];
+    if (modoOscuro) {
       body.classList.add("modo-oscuro");
-      setModoOscuro(true);
-      //lightDarkMode.src=Sun
-     // setModeIcon(Sun)
-
+      body.classList.remove("modo-claro");
     } else {
-      body.classList.remove("modo-oscuro");
       body.classList.add("modo-claro");
-      setModoOscuro(false);
-      //lightDarkMode.src=Moon
-      //setModeIcon(Moon)
-
+      body.classList.remove("modo-oscuro");
     }
+  }, [modoOscuro]);
+
+  function cambiarModo2() {
+    setModoOscuro(!modoOscuro);
   }
+
+  // function cambiarModo() {
+  //   let body = document.getElementsByTagName("body")[0];
+  //   if (body.classList.contains("modo-claro")) {
+  //     body.classList.remove("modo-claro");
+  //     body.classList.add("modo-oscuro");
+  //     setModoOscuro(true);
+
+
+  //   } else {
+  //     body.classList.remove("modo-oscuro");
+  //     body.classList.add("modo-claro");
+  //     setModoOscuro(false);
+      
+  //   }
+  // }
+
   return (
     <header>
         <div className="top">
           {/* <img src={Logo}/> */}
           {modoOscuro ? <img src={Logo} className="darkModeLogo"/> : <img src={Logo}/>}
-          {modoOscuro ? <img src={Sun2} className="lightDarkMode" onClick={cambiarModo}/> : <img src={Moon2} className="lightDarkMode" onClick={cambiarModo}/>}
+          {modoOscuro ? <img src={Sun2} className="lightDarkMode" onClick={cambiarModo2}/> : <img src={Moon2} className="lightDarkMode" onClick={cambiarModo2}/>}
 
           <h2>Home</h2>
         </div>

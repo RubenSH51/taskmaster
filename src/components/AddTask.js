@@ -8,9 +8,7 @@ export const AddTask = ({tasks,setTasks}) => {
 
     function handleChange(e)
     {
-      //console.log(e.target.value)
       setNewTask(e.target.value)
-      
     } 
 
     function handleReset()
@@ -22,6 +20,13 @@ export const AddTask = ({tasks,setTasks}) => {
     function handleSubmit(e)
     {
       e.preventDefault();
+      if (newTask.length<2)
+      {
+
+        console.log('No se puede enviar tarea vacía o tan corta');
+        return -1
+      }
+      
       const task = {
         id: Math.floor(Math.random()*10000),
         name: newTask,
@@ -40,12 +45,6 @@ export const AddTask = ({tasks,setTasks}) => {
       
     }
 
-
-    function nuevaTarea()
-    {
-        const valorInput = document.querySelector('.addtask form input').value;
-        
-    }
 
   return (
     <section className="addtask">

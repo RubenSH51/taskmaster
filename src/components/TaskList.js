@@ -9,7 +9,6 @@ export const TaskList = ({tasks,setTasks, onTaskStatusChange}) => {
 
   const [show, setShow] = useState(true);
   const [tasksFilterOption, setTasksFilterOption] = useState('All');
-  const [isSelected, setIsSelected] = useState(false);
 
   function deleteTask(id)
   {
@@ -21,12 +20,16 @@ export const TaskList = ({tasks,setTasks, onTaskStatusChange}) => {
   return (
     <main>
         <div className="tasksFilterButtonContainer">
-          <button className="tasksFilterButton tasksFilterButton-all" onClick={() => setTasksFilterOption('All')}>All</button>
-          <button className="tasksFilterButton tasksFilterButton-pending" onClick={() => setTasksFilterOption("Pending")}>Pending</button>
-          <button className="tasksFilterButton tasksFilterButton-completed" onClick={() => setTasksFilterOption("Completed")}>Completed</button>
-          <button className="toggleBTN" onClick={() => setShow(!show)}>{show ? "Hide" : "Show"}</button>
+          <div className='tasksFilterButtonContainer-upper'>
+            <button className="tasksFilterButton tasksFilterButton-all" onClick={() => setTasksFilterOption('All')}>All</button>
+            <button className="tasksFilterButton tasksFilterButton-pending" onClick={() => setTasksFilterOption("Pending")}>Pending</button>
+            <button className="tasksFilterButton tasksFilterButton-completed" onClick={() => setTasksFilterOption("Completed")}>Completed</button>
+          </div>
+          <div className='tasksFilterButtonContainer-lower'>
+            <button className="toggleBTN" onClick={() => setShow(!show)}>{show ? "Hide" : "Show"}</button>
+          </div>
         </div>
-        <ul>
+        <ul>{show && <span className='taskDisplayingTitle'>Displaying <i>{tasksFilterOption}</i> tasks</span>}
           {/* {show && tasks.map((task) => (
             <Card key={ task.id} task={task} deleteTask={deleteTask} onTaskStatusChange={onTaskStatusChange}/>
           ))} */}

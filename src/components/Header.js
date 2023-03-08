@@ -1,14 +1,15 @@
 import { useState,useEffect } from "react"
 import Logo from "../assets/logo.png"
-import Moon from "../assets/moon.png"
+//import Moon from "../assets/moon.png"
 import Moon2 from "../assets/moon2.png"
-import Sun from "../assets/sun.png"
+//import Sun from "../assets/sun.png"
 import Sun2 from "../assets/sun2.png"
 import "./header.css"
+import React from "react";
 
 export const Header = () => {
 
-  const lightDarkMode = document.querySelector('.lightDarkMode');
+  //const lightDarkMode = document.querySelector('.lightDarkMode');
 
 
   const [modoOscuro, setModoOscuro] = useState(() => {
@@ -51,8 +52,8 @@ export const Header = () => {
     <header>
         <div className="top">
           {/* <img src={Logo}/> */}
-          {modoOscuro ? <img src={Logo} className="darkModeLogo"/> : <img src={Logo}/>}
-          {modoOscuro ? <img src={Sun2} className="lightDarkMode" onClick={cambiarModo2}/> : <img src={Moon2} className="lightDarkMode" onClick={cambiarModo2}/>}
+          {modoOscuro ? <img src={Logo} alt="logo" className="darkModeLogo"/> : <img src={Logo} alt="logo" />}
+          {modoOscuro ? <img src={Sun2} alt="mode" className="lightDarkMode" onClick={cambiarModo2}/> : <img src={Moon2}  alt="mode" className="lightDarkMode" onClick={cambiarModo2}/>}
 
           <h2>Home</h2>
         </div>

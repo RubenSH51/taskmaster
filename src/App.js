@@ -5,8 +5,8 @@ import { Header } from "./components/Header"
 import { TaskList } from "./components/TaskList";
 import { Footer } from "./components/Footer";
 import { AddTask } from "./components/AddTask";
-import { BoxContainer } from "./components/BoxContainer";
-
+//import { BoxContainer } from "./components/BoxContainer";
+import React from "react";
 
 // Testing
 export const App = () => {
@@ -53,7 +53,6 @@ export const App = () => {
     setTasks(updatedTasks);
   }
 
- 
 
   return (
 

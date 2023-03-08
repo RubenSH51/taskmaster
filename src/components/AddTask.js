@@ -20,7 +20,13 @@ export const AddTask = ({tasks,setTasks}) => {
     {
       setNewTask('')
       setTaskProgress(false)
+      
     }
+
+    // function clearTasks()
+    // {
+    //   setTasks([])
+    // }
 
     function handleSubmit(e)
     {
@@ -53,8 +59,6 @@ export const AddTask = ({tasks,setTasks}) => {
       
     }
 
-
-
     
     function taskDate()
     {
@@ -85,11 +89,11 @@ export const AddTask = ({tasks,setTasks}) => {
             
             <div>
               <select onChange={(event) => setTaskProgress(event.target.value) } value={taskProgress}>
-                <option value={false}>Pending ⌛</option>
+                <option value={false}>Pending⌛</option>
                 <option value={true}>Completed ✅</option>
               </select>
               <button className="addtaskBTN">Add task ✔</button>
-              <button className="reset" type="button" onClick={handleReset}>Reset 🚫</button>
+              <button className="reset" type="button" onClick={handleReset}>Reset <span role="img" aria-label="">🚫</span></button>
             </div>
         </form>
     </section>

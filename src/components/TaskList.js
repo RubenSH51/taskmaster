@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState } from "react"; 
 import { Card } from "./Card"
-import { BoxCard } from './BoxCard';
-import { BoxContainer } from './BoxContainer';
+//import { BoxCard } from './BoxCard';
+//import { BoxContainer } from './BoxContainer';
 import "./tasklist.css"
 
 export const TaskList = ({tasks,setTasks, onTaskStatusChange}) => {
@@ -16,10 +16,6 @@ export const TaskList = ({tasks,setTasks, onTaskStatusChange}) => {
   }
 
 
-
-
-
-  
   return (
     <main>
         <div className="tasksFilterButtonContainer">
@@ -33,21 +29,21 @@ export const TaskList = ({tasks,setTasks, onTaskStatusChange}) => {
           </div>
         </div>
         <ul>{show && <span className='taskDisplayingTitle'>Displaying <i>{tasksFilterOption}</i> tasks</span>}
-          {/* {show && tasks.map((task) => (
+          {/* { show && tasks.map((task) => (
             <Card key={ task.id} task={task} deleteTask={deleteTask} onTaskStatusChange={onTaskStatusChange}/>
-          ))} */}
-          {
-              tasksFilterOption=="Completed" && show && tasks.filter(task => task.completed == true).map((task) => (
+          ))}  */}
+           {
+              tasksFilterOption==="Completed" && show && tasks.filter(task => task.completed === true).map((task) => (
               <Card key={ task.id} task={task} deleteTask={deleteTask} onTaskStatusChange={onTaskStatusChange}/>
           ))}
           {
-              tasksFilterOption=="Pending" && show && tasks.filter(task => task.completed == false).map((task) => (
+              tasksFilterOption==="Pending" && show && tasks.filter(task => task.completed === false).map((task) => (
               <Card key={ task.id} task={task} deleteTask={deleteTask} onTaskStatusChange={onTaskStatusChange}/>
           ))}
           {
-              tasksFilterOption=="All" && show && tasks.map((task) => (
+              tasksFilterOption==="All" && show && tasks.map((task) => (
               <Card key={ task.id} task={task} deleteTask={deleteTask} onTaskStatusChange={onTaskStatusChange}/>
-          ))}
+          ))} 
 
 
 

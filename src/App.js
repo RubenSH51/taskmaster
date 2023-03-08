@@ -54,7 +54,10 @@ export const App = () => {
   }
 
   const version = 'v1.20'
-  window.onload = () => {console.log(version)}
+  window.onload = () => {
+
+    console.log(version)
+  }
 
 
 
@@ -62,7 +65,7 @@ export const App = () => {
 
       // <div className="App" >
       <div className={`App ${modoOscuro ? 'modo-oscuro' : 'modo-claro'}`}>
-        <Header modoOscuro={modoOscuro} onModoOscuroChange={handleModoOscuroChange} />
+        <Header modoOscuro={modoOscuro} onModoOscuroChange={handleModoOscuroChange} version={version}/>
 
         {/* <Header /> */}
         <AddTask  tasks={tasks} setTasks={setTasks}/>

@@ -7,7 +7,7 @@ import Sun2 from "../assets/sun2.png"
 import "./header.css"
 import React from "react";
 
-export const Header = () => {
+export const Header = ({version}) => {
 
   //const lightDarkMode = document.querySelector('.lightDarkMode');
 
@@ -57,7 +57,7 @@ export const Header = () => {
 
           <h2>Home</h2>
         </div>
-        <h1>TaskMaster</h1>
+        <h1>TaskMaster <span>{version}</span></h1>
     </header>
     
   )

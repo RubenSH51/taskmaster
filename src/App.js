@@ -53,6 +53,10 @@ export const App = () => {
     setTasks(updatedTasks);
   }
 
+  const version = 'v1.20'
+  window.onload = () => {console.log(version)}
+
+
 
   return (
 

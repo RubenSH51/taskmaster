@@ -30,7 +30,7 @@ export const Card = (props) => {
               <button className={styles.boton} onClick={() => props.deleteTask(task.id)}>Delete</button>
             </div>
             <div className="li-lower">
-              <p className="taskDateTitle">{props.task.date} <span role="img" aria-label="" >➡️</span>  </p>
+              <p className="taskDateTitle">{props.task.date} <span role="img" aria-label="" >➡️ </span>  </p>
               <p className="taskTimeTitle">{props.task.time}</p>
             </div>
 

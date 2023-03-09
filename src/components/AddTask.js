@@ -23,10 +23,10 @@ export const AddTask = ({tasks,setTasks}) => {
       
     }
 
-    // function clearTasks()
-    // {
-    //   setTasks([])
-    // }
+    function clearTasks()
+    {
+      setTasks([])
+    }
 
     function handleSubmit(e)
     {
@@ -93,7 +93,7 @@ export const AddTask = ({tasks,setTasks}) => {
                 <option value={true}>Completed ✅</option>
               </select>
               <button className="addtaskBTN">Add task ✔</button>
-              <button className="reset" type="button" onClick={handleReset}>Reset <span role="img" aria-label="">🚫</span></button>
+              <button className="reset" type="button" onClick={clearTasks}>Clear <span role="img" aria-label="">🧹</span></button>
             </div>
         </form>
     </section>

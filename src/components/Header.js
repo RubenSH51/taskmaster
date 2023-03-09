@@ -7,9 +7,25 @@ import Sun2 from "../assets/sun2.png"
 import "./header.css"
 import React from "react";
 
+import { quotes } from "../quotes"
+
 export const Header = ({version}) => {
 
-  //const lightDarkMode = document.querySelector('.lightDarkMode');
+  const valueRandom = Math.floor(Math.random()*quotes.length)
+  const [fraseActual, setFraseActual] = useState(quotes[valueRandom].quote);
+  const [autorActual, setAutorActual] = useState(quotes[valueRandom].author);
+  // const [indiceActual, setIndiceActual] = useState(0);
+
+  useEffect(() => {
+      setInterval(() => {
+
+      const nuevoIndice = Math.floor(Math.random()*quotes.length)
+      setFraseActual(quotes[nuevoIndice].quote);
+      setAutorActual(quotes[nuevoIndice].author)
+    }, 10000);
+
+
+  }, []);
 
 
   const [modoOscuro, setModoOscuro] = useState(() => {
@@ -28,36 +44,30 @@ export const Header = ({version}) => {
     }
   }, [modoOscuro]);
 
-  function cambiarModo2() {
+  function cambiarModo() {
     setModoOscuro(!modoOscuro);
   }
 
-  // function cambiarModo() {
-  //   let body = document.getElementsByTagName("body")[0];
-  //   if (body.classList.contains("modo-claro")) {
-  //     body.classList.remove("modo-claro");
-  //     body.classList.add("modo-oscuro");
-  //     setModoOscuro(true);
-
-
-  //   } else {
-  //     body.classList.remove("modo-oscuro");
-  //     body.classList.add("modo-claro");
-  //     setModoOscuro(false);
-      
-  //   }
-  // }
 
   return (
     <header>
         <div className="top">
-          {/* <img src={Logo}/> */}
-          {modoOscuro ? <img src={Logo} alt="logo" className="darkModeLogo"/> : <img src={Logo} alt="logo" />}
-          {modoOscuro ? <img src={Sun2} alt="mode" className="lightDarkMode" onClick={cambiarModo2}/> : <img src={Moon2}  alt="mode" className="lightDarkMode" onClick={cambiarModo2}/>}
+          <div className="left">
+            {/* <img src={Logo}/> */}
+            {modoOscuro ? <img src={Logo} alt="logo" className="darkModeLogo"/> : <img src={Logo} alt="logo" />}
+            <h2>TaskMaster <span className="version">v2.3.2</span></h2>
+            {/* <h2>Home</h2> */}
+          </div>
+          <div className="right">
+          {modoOscuro ? <img src={Sun2} alt="mode" className="lightDarkMode" onClick={cambiarModo}/> : <img src={Moon2}  alt="mode" className="lightDarkMode" onClick={cambiarModo}/>}
 
-          <h2>Home</h2>
+          </div>
         </div>
-        <h1>TaskMaster <span>{version}</span></h1>
+
+        <div className="bottom">
+          <p className="randomQuote">"{fraseActual}" - <i>{autorActual}</i></p>
+        </div>
+        {/* <h1>TaskMaster <span>{version}</span></h1> */}
     </header>
     
   )

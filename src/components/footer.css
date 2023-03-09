@@ -2,8 +2,16 @@
 .footer
 {
     margin: 20px;
-
+    flex-direction: column;
+    gap:10px;
     display: flex;
     justify-content: center;
     font-size: 1.5rem;
+    align-items: center;
+}
+
+.footer p
+{
+    max-width: 500px;
+    text-align: center;
 }

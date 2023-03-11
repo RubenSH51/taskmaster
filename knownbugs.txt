@@ -1,0 +1,12 @@
+Bugs conocidos y pronto a reparar
+- En addTask al cambiar el display estaría bueno que el input tenga el mismo ancho que los 3 botones de abajo. ✅
+- Gap entre esos elementos. ✅
+- Gap entre la tarea y el boton delete al estar en display chico. ✅
+- Gap entre los botones de filtros con el botón hide cuando este se sitúa debajo. ✅
+- Cambiar las opciones del select por prioridad en la tarea.
+- Guardar la prioridad de la tarea en localStorage.
+- Agregar emojis apropiados para la prioridad.
+- Estilos de la card. Sobre todo el sombreado. No me convence. Tampoco los tachados me gustan mucho. 
+- Cambiar emoji que separa día con hora.
+- Achicar o cambiar el ícono de luna.
+- Agregar más themes, y adaptar el localStorage para guardarlos.

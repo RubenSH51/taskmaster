@@ -26,7 +26,7 @@
 .addtask form div
 {
     display: flex;
-    gap: 10px;
+    gap: 12px;
 }
 
 
@@ -108,6 +108,11 @@
 {
     .addtask form
     {
-        flex-direction: column;
+        flex-direction: column; 
+    }
+
+    .addtask form input
+    {
+        width: 365px;
     }
 }

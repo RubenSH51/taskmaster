@@ -179,7 +179,7 @@ ul li > div:nth-child(2) p
     main ul li .li-upper
     {
         flex-direction: column;
-        gap:10px;
+        gap:25px;
     }
 }
 
@@ -201,7 +201,7 @@ ul li > div:nth-child(2) p
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 15px;
     }
 
 

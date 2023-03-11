@@ -9,4 +9,5 @@ Bugs conocidos y pronto a reparar
 - Estilos de la card. Sobre todo el sombreado. No me convence. Tampoco los tachados me gustan mucho.  ✅
 - Cambiar emoji que separa día con hora. ✅
 - Achicar o cambiar el ícono de luna. ✅
+- Reparado estado de completado de tarea. ✅  
 - Agregar más themes, y adaptar el localStorage para guardarlos.

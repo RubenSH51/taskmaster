@@ -7,6 +7,7 @@ export const AddTask = ({tasks,setTasks}) => {
     const [taskProgress, setTaskProgress] = useState('💤')
     const [fecha,setFecha] = useState('')
     const [time,setTime] = useState('')
+    // const [isCompleted, setIsCompleted] = useState(false)
 
     function handleChange(e)
     {
@@ -45,6 +46,7 @@ export const AddTask = ({tasks,setTasks}) => {
         status: taskProgress,
         date: fecha,
         time: time,
+        completed: Boolean(newTask.completed)
       }
       console.log(task)
       //if (task.id<1000){task.id = '0'+task.id}else{task.id = task.id.toString()}

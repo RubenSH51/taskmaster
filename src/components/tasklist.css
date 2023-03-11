@@ -91,14 +91,23 @@ ul li > div:nth-child(2) p
 }
 
 
+
+.completedAndTachado
+{
+    text-decoration: line-through; 
+}
+
 .completed
 {
-    text-decoration: line-through;
+    /* text-decoration: line-through; */
     box-shadow: -1px 8px 16px 1px rgba(66,250,51,0.77);
     -webkit-box-shadow: -1px 8px 16px 1px rgba(66,250,51,0.77);
     -moz-box-shadow: -1px 8px 16px 1px rgba(66,250,51,0.77);
     color: rgb(53, 52, 52);
+    /* background-color: rgb(169, 248, 169); */
 
+    opacity: 0.3;
+    background-color: rgb(19, 18, 18);
 }
 
 .incomplete
@@ -138,6 +147,16 @@ ul li > div:nth-child(2) p
     background-color: rgb(206, 101, 16);
     outline: none;
     border-radius: 10px;
+}
+
+main ul li .li-lower
+{
+    align-items: center;
+}
+
+main ul li .li-lower .taskDateTitle
+{
+    padding-right: 2px;
 }
 
 
@@ -186,7 +205,7 @@ ul li > div:nth-child(2) p
 
 @media (max-width: 640px)
 {
-    .li-upper > div span:nth-child(2)
+    .li-upper > div span
     {
         font-size: 2.2rem;
     }

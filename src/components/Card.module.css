@@ -22,4 +22,16 @@
     color: rgb(209, 22, 22);
 }
 
+.doneBTN
+{
+    background-color: rgb(166, 250, 166);
+    pointer-events: none; /*QUITA EL HOVER! LOOOL*/
+    text-decoration: none;
+
+   
+}
+
+li.completed .li-upper button {
+    text-decoration: none !important;
+  }
 

@@ -39,9 +39,15 @@ header .left
 
 header .right
 {
-    width: 50px;
+    width: 80px;
     height: 80px;
     display: flex;
+}
+
+header .right img
+{
+    align-self: center;
+    width: 85%;
 }
 
 header .left h2

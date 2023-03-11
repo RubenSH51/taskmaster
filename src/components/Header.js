@@ -55,7 +55,7 @@ export const Header = ({version}) => {
           <div className="left">
             {/* <img src={Logo}/> */}
             {modoOscuro ? <img src={Logo} alt="logo" className="darkModeLogo"/> : <img src={Logo} alt="logo" />}
-            <h2>TaskMaster <span className="version">v2.3.2</span></h2>
+            <h2>TaskMaster <span className="version">{version}</span></h2>
             {/* <h2>Home</h2> */}
           </div>
           <div className="right">

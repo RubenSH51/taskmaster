@@ -15,7 +15,7 @@ main
     width: 100px;
     font-size: 2rem;
     height: 31px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     outline: 3px solid #4545e6;
     border: none;
     background-color: transparent;
@@ -25,6 +25,7 @@ main
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
 }
 
 .toggleBTN:hover
@@ -106,8 +107,9 @@ ul li > div:nth-child(2) p
     color: rgb(53, 52, 52);
     /* background-color: rgb(169, 248, 169); */
 
-    opacity: 0.3;
-    background-color: rgb(19, 18, 18);
+    opacity: 0.8;
+    /* background-color: rgb(19, 18, 18); */
+    /* background-color: white; */
 }
 
 .incomplete
@@ -159,6 +161,29 @@ main ul li .li-lower .taskDateTitle
     padding-right: 2px;
 }
 
+li .li-upper button
+{
+    max-height: 36px    ;
+}
+
+
+.cardButtonsContainer
+{
+    display: flex;
+    gap: 10px;
+}
+
+.cardButtonsContainer button:nth-child(1)
+{
+    background-color: #1d781d;
+}
+
+.cardButtonsContainer button:nth-child(1):hover
+{
+    background-color: transparent;
+    color: #1d781d;
+    outline: 1px solid #1d781d;
+}
 
 @media (max-width: 750px)
 {
@@ -200,6 +225,13 @@ main ul li .li-lower .taskDateTitle
         flex-direction: column;
         gap:25px;
     }
+
+    main ul li .li-upper .cardButtonsContainer
+    {
+        flex-direction: column;
+    }
+
+
 }
 
 
@@ -237,6 +269,7 @@ main ul li .li-lower .taskDateTitle
         display: flex;
         justify-content: center;
         width: 290px;
+        display: none;
     }
 
     main ul li

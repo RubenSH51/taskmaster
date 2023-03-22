@@ -9,7 +9,7 @@
     font-size: 1.4rem;
     font-weight: bold;
     border: none;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     background-color: rgb(209, 22, 22);
     padding: 10px 15px;
     transition: 0.2s all ease-in-out;
@@ -20,6 +20,7 @@
     outline: 2px solid rgb(209, 22, 22);
     background-color: transparent;
     color: rgb(209, 22, 22);
+    border-radius: 10px;
 }
 
 .doneBTN

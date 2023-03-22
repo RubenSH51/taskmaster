@@ -31,9 +31,16 @@ export const Card = (props) => {
               </div>
               {
               task.completed ? 
-              <button className={`${styles.doneBTN} ${styles.boton}`} onClick={() => props.deleteTask(task.id)}>Done!</button> 
+              <div className='cardButtonsContainer'>
+                <button className={styles.boton} onClick={() => taskStatusChange(task.id)}>Done!</button>
+                {/* <button className={`${styles.doneBTN} ${styles.boton}`} onClick={() => props.deleteTask(task.id)}>Done!</button>  */}
+
+              </div>
               :
-              <button className={styles.boton} onClick={() => props.deleteTask(task.id)}>Delete</button>
+              <div className='cardButtonsContainer'>
+                <button className={styles.boton} onClick={() => taskStatusChange(task.id)}>Complete</button>
+                <button className={styles.boton} onClick={() => props.deleteTask(task.id)}>Discard</button>
+              </div>
               }
 
 

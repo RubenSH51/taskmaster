@@ -11,3 +11,13 @@ Bugs conocidos y pronto a reparar
 - Achicar o cambiar el ícono de luna. ✅
 - Reparado estado de completado de tarea. ✅  
 - Agregar más themes, y adaptar el localStorage para guardarlos.
+
+***************************************************
+
+Datos de la nueva versión:
+
+- Agregado botón de "Complete" en las cards para mejorar la experiencia de usuario.
+- Todos los botones presentan el mismo estilo rectangular y con borde redondeado de 10px de radius en modo Hover.
+- Botón Hide oculto hasta mejorar su funcionalidad.
+
+***************************************************

@@ -96,7 +96,7 @@ export const AddTask = ({tasks,setTasks}) => {
                 <option value={'🔥'}>Critical 🔥</option>
               </select>
               <button className="addtaskBTN">Add task ✔</button>
-              <button className="reset" type="button" onClick={clearTasks}>Clear <span role="img" aria-label="">🧹</span></button>
+              {/* <button className="reset" type="button" onClick={clearTasks}>Clear <span role="img" aria-label="">🧹</span></button> */}
             </div>
         </form>
     </section>

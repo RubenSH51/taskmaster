@@ -12,27 +12,29 @@ main
 {
     position: absolute;
     right: 0;
-    width: 100px;
+    top: -5px;
+    width: 115px;
     font-size: 2rem;
-    height: 31px;
+    height: 40px;
     /* border-radius: 10px; */
-    outline: 3px solid #4545e6;
+    outline: 3px solid #f90817;
     border: none;
     background-color: transparent;
-    color: #4545e6;
+    color: #f90817;
     transition: 0.2s all ease-in-out;
     font-weight: bolder;
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
+    /* display: none; */
 }
 
 .toggleBTN:hover
 {
-    background-color: #4545e6;
+    background-color: #f90817   ;
     color: white;
     outline: none;
+    border-radius: 10px;
 }
 
 main ul
@@ -143,13 +145,13 @@ ul li > div:nth-child(2) p
     font-weight: bold;
 }
 
-.tasksFilterButton:hover
+/* .tasksFilterButton:hover
 {
     color: white;
     background-color: rgb(206, 101, 16);
     outline: none;
     border-radius: 10px;
-}
+} */
 
 main ul li .li-lower
 {
@@ -184,6 +186,39 @@ li .li-upper button
     color: #1d781d;
     outline: 1px solid #1d781d;
 }
+
+
+.cardButtonsContainer button:nth-child(1)#undoBTN
+{
+    background-color: #cf8120;
+}
+
+.cardButtonsContainer button:nth-child(1)#undoBTN:hover
+{
+    background-color: transparent;
+    color: #cf8120;
+    outline: 1px solid #cf8120;
+}
+
+
+.filter-selected
+{
+    border-radius: 10px;
+    background-color: #cf8120;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 750px)
 {
@@ -269,7 +304,7 @@ li .li-upper button
         display: flex;
         justify-content: center;
         width: 290px;
-        display: none;
+        /* display: none; */
     }
 
     main ul li

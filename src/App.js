@@ -54,7 +54,7 @@ export const App = () => {
     setTasks(updatedTasks);
   }
 
-  const version = 'v2.5.1'
+  const version = 'v2.5.2'
   window.onload = () => {
 
     console.log(version)

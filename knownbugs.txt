@@ -10,14 +10,17 @@ Bugs conocidos y pronto a reparar
 - Cambiar emoji que separa día con hora. ✅
 - Achicar o cambiar el ícono de luna. ✅
 - Reparado estado de completado de tarea. ✅  
+- Agregado botón de "Complete" en las cards para mejorar la experiencia de usuario. ✅
+- Todos los botones presentan el mismo estilo rectangular y con borde redondeado de 10px de radius en modo Hover. ✅
+- Botón Hide oculto hasta mejorar su funcionalidad. ✅
 - Agregar más themes, y adaptar el localStorage para guardarlos.
 
 ***************************************************
 
-Datos de la nueva versión:
+Datos de la nueva versión: v2.5.2
 
-- Agregado botón de "Complete" en las cards para mejorar la experiencia de usuario.
-- Todos los botones presentan el mismo estilo rectangular y con borde redondeado de 10px de radius en modo Hover.
-- Botón Hide oculto hasta mejorar su funcionalidad.
+- Botón clear reubicado.
+- Mejora en el funcionamiento y la experiencia de usuario de los botones de filtro.
+
 
 ***************************************************

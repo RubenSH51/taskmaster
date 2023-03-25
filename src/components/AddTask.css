@@ -14,7 +14,7 @@
     border: 1px solid gray;
     padding: 15px 54px;
     margin: 0 auto;
-    gap: 10px;
+    gap: 30px;
 }
 
 .addtask form label 
@@ -104,11 +104,24 @@
 }
 
 
+
 @media (max-width: 870px)
 {
     .addtask form
     {
         flex-direction: column; 
+        gap:20px;
+    }
+
+    .addtask form div
+    {
+        width: 100%;
+    }
+
+    .addtask form div select,.addtask form div button
+    {
+        width: 50%;
+
     }
 
     .addtask form input

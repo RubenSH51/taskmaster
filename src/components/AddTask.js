@@ -24,10 +24,10 @@ export const AddTask = ({tasks,setTasks}) => {
       
     }
 
-    function clearTasks()
-    {
-      setTasks([])
-    }
+    // function clearTasks()
+    // {
+    //   setTasks([])
+    // }
 
     function handleSubmit(e)
     {

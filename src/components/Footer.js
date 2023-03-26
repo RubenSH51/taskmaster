@@ -23,11 +23,10 @@ export const Footer = () => {
 
 
   return (
-    <div className="footer">
+    <footer className="footer">
         <p>"{sherlockQuote}"</p>
         <p><i>{autor}</i></p>
         <small>2023 - © All rights reserved</small>
-        
-    </div>
+    </footer>
   )
 }

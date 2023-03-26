@@ -1,0 +1,78 @@
+
+#modalBG
+{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalWindow
+{
+    width: 70%;
+    min-width: 350px;
+    max-width: 550px;
+    min-height: 200px;
+    background-color: rgb(209, 209, 212);
+    opacity: 1;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#modalWindow h2
+{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: black;
+}
+
+.modal-botonera
+{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+
+.modal-botonera button
+{
+    width: 100px;
+    font-size: 2rem;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    transition: 0.3s all ease-in-out
+}
+
+.modal-botonera button:nth-child(1)
+{
+    outline: 3px solid red;
+    color: red;
+}
+
+.modal-botonera button:nth-child(1):hover
+{
+    outline: none;
+    background-color: red;
+    color: white;
+}
+
+.modal-botonera button:nth-child(2)
+{
+    outline: 3px solid green;
+    color: green;
+}
+
+.modal-botonera button:nth-child(2):hover
+{
+    outline: none;
+    background-color: green;
+    color: white;
+}

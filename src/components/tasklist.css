@@ -139,7 +139,7 @@ ul li > div:nth-child(2) p
     border: none;
     transition: 0.2s all ease-in-out;
     height: 30px;
-    width: 90px;
+    width: 100px;
     outline: 3px solid rgb(206, 101, 16);
     color: rgb(206, 101, 16);
     font-weight: bold;
@@ -263,9 +263,14 @@ li .li-upper button
 
     main ul li .li-upper .cardButtonsContainer
     {
-        flex-direction: column;
+        /* flex-direction: column; */
+        justify-content: center;
     }
 
+    main ul li .li-upper .cardButtonsContainer button
+    {
+        width: 50%;
+    }
 
 }
 
@@ -280,14 +285,14 @@ li .li-upper button
 
 
 
-@media (max-width: 520px)
+@media (max-width: 560px)
 {
     .tasksFilterButtonContainer
     {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 15px;
+        gap: 30px;
     }
 
 
@@ -303,7 +308,7 @@ li .li-upper button
         position: relative;
         display: flex;
         justify-content: center;
-        width: 290px;
+        width: 320px;
         /* display: none; */
     }
 

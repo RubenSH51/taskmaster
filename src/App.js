@@ -5,6 +5,7 @@ import { Header } from "./components/Header"
 import { TaskList } from "./components/TaskList";
 import { Footer } from "./components/Footer";
 import { AddTask } from "./components/AddTask";
+import { Modal } from "./components/Modal";
 //import { BoxContainer } from "./components/BoxContainer";
 import React from "react";
 
@@ -54,7 +55,10 @@ export const App = () => {
     setTasks(updatedTasks);
   }
 
-  const version = 'v2.5.2'
+  const [modalActivado, setModalActivado] = useState(false);
+
+
+  const version = 'v2.6.1'
   window.onload = () => {
 
     console.log(version)
@@ -67,11 +71,21 @@ export const App = () => {
       // <div className="App" >
       <div className={`App ${modoOscuro ? 'modo-oscuro' : 'modo-claro'}`}>
         <Header modoOscuro={modoOscuro} onModoOscuroChange={handleModoOscuroChange} version={version}/>
-
-        {/* <Header /> */}
         <AddTask  tasks={tasks} setTasks={setTasks}/>
-        <TaskList tasks={tasks} setTasks={setTasks} onTaskStatusChange={handleTaskStatusChange}/>
+        <TaskList 
+          tasks={tasks} 
+          setTasks={setTasks} 
+          onTaskStatusChange={handleTaskStatusChange}
+          modalActivado={modalActivado}
+          setModalActivado={setModalActivado}
+        />
         <Footer />
+        {modalActivado && <Modal 
+                            modalActivado={modalActivado} 
+                            setModalActivado={setModalActivado}
+                            tasks={tasks}
+                            setTasks={setTasks}
+                          />}
       </div>
   )
 }

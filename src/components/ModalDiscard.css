@@ -1,0 +1,97 @@
+#modalDiscardBG
+{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalDiscardWindow
+{
+    color: white;
+    opacity: 1;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+#modalDiscardWindow h2
+{
+    font-size: 2.5rem;
+    text-align: center;
+
+    color: white;
+}
+
+#modalDiscardWindow p
+{
+    font-size: 2.0rem;
+    text-align: center;
+
+    color: black;
+}
+
+#modalDiscardWindow input,#modalDiscardWindow select
+{
+    width: 250px;
+    height: 30px;
+    font-size: 1.7rem;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+#modalDiscardWindow .modalDiscard-botonera
+{
+
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    gap: 10px;
+}
+
+.modalDiscard-botonera button
+{
+    width: 120px;
+    height: 40px;
+    font-size: 1.7rem;
+    background-color: transparent;
+    color:white;
+    font-weight: bolder;
+    border: none;
+    transition: 0.3s all ease-in-out;
+}
+
+.modalDiscard-botonera button:nth-child(1)
+{
+    outline: 2px solid red;
+    color: red;
+
+}
+.modalDiscard-botonera button:nth-child(1):hover
+{
+    outline: none;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+}
+
+.modalDiscard-botonera button:nth-child(2)
+{
+    outline: 2px solid green;
+    color: green;
+}
+.modalDiscard-botonera button:nth-child(2):hover
+{
+    outline: none;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+}

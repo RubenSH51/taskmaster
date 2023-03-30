@@ -2,12 +2,14 @@ import React from "react";
 import { useState } from "react";
 import styles from "./Card.module.css"
 import { ModalEdit } from "./ModalEdit";
+import { ModalDiscard } from "./ModalDiscard";
 
 export const Card = (props) => {
 
   //const [tasks, setTasks] = useState(props.tasks)
   const [task, setTask] = useState(props.task)
   const [isEditing, setIsEditing] = useState(false);
+  const [isDiscarding, setIsDiscarding] = useState(false);
   
 
   function taskStatusChange(id)
@@ -29,30 +31,59 @@ export const Card = (props) => {
 
   }
 
+  function deleteWarning(id)
+  {
+    setIsDiscarding(!isDiscarding)
+    let posicionCorrecta;
+    const selectedTask = props.tasks.find(todo => todo.id === id)
+    console.log(selectedTask);
+    
+    const tareas = document.querySelectorAll(".li-upper div:nth-child(1)")
+    const botones = document.querySelectorAll(".li-upper div:nth-child(2)")
+    const spans  = document.querySelectorAll(".li-upper div:nth-child(1) span:nth-child(2)")
+    /* .textContent.split(' - ')[0] */
+
+
+  }
+
+
+
 
   return (
     
     <>
         <li className={task.completed ? "completed" : "incomplete "}>
-            <div className="li-upper">
-              <div className={task.completed ? "completedAndTachado" : ""}>
 
-                
+        {isDiscarding ? <ModalDiscard 
+                  id={task.id} 
+                  isDiscarding={isDiscarding} 
+                  setIsDiscarding={setIsDiscarding}
+                  tasks={props.tasks}
+                  setTasks={props.setTasks}
+                  task={task}
+                  deleteTask={props.deleteTask}
+                />
+        :
+        <>
+          <div className="li-upper">
+              <div className={task.completed ? "completedAndTachado" : ""}>
                 <span role="img" aria-label="" className="cardTodoIcon" onClick={() => taskStatusChange(task.id)}>{task.status} </span>
                 <span role="img" aria-label="" className={styles.ganzo}>{task.id} - {props.task.name}</span>
               </div>
               {
               task.completed ? 
               <div className='cardButtonsContainer'>
-                <button className={styles.boton} id='undoBTN' onClick={() => taskStatusChange(task.id)}>Undo!</button>
+                <button className={styles.boton2} id='undoBTN' onClick={() => taskStatusChange(task.id)}>Undo!</button>
                 {/* <button className={`${styles.doneBTN} ${styles.boton}`} onClick={() => props.deleteTask(task.id)}>Done!</button>  */}
 
               </div>
               :
               <div className='cardButtonsContainer'>
-                <button className={styles.boton} onClick={() => editMode(task.id)}>Edit</button>
-                <button className={styles.boton} onClick={() => taskStatusChange(task.id)}>Complete</button>
-                <button className={styles.boton} onClick={() => props.deleteTask(task.id)}>Discard</button>
+                <button className={styles.boton} onClick={() => editMode(task.id)}> <span role="img" aria-label="img" >📝</span></button>
+                <button className={styles.boton} onClick={() => taskStatusChange(task.id)}> <span role="img" aria-label="img" >✅</span></button> 
+                {/* <button className={styles.boton} onClick={() => props.deleteTask(task.id)}> <span role="img" aria-label="img" >🗑️</span></button> */}
+                <button className={styles.boton} onClick={() => deleteWarning(task.id)}> <span role="img" aria-label="img" >🗑️</span></button>
+                
               </div>
               }
 
@@ -67,6 +98,12 @@ export const Card = (props) => {
               {/* <p className="taskDateTitle">{props.task.date} <span role="img" aria-label="" >💠 </span>  </p>
               <p className="taskTimeTitle">{props.task.time}</p> */}
             </div>
+        </>      
+              
+          }
+
+                
+            
 
         </li>
         {isEditing && 
@@ -79,5 +116,5 @@ export const Card = (props) => {
           />
         }
     </>
-  )
+  ) 
 }

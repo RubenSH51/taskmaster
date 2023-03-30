@@ -62,11 +62,13 @@ export const ModalEdit = ({task,isEditing, setIsEditing,tasks,setTasks}) => {
         <div id="modalEditWindow">
             <h2>Task ID: {task.id}</h2>
             <input id="taskToEdit" name="taskToEdit" autoComplete='off' onChange={changingValue} value={newValue}/>
-            <select>
-                <option value={'💤'}>Minor 💤</option>
-                <option value={'⏰'}>Vital ⏰</option>
-                <option value={'🔥'}>Critical 🔥</option>
+            <select defaultValue={task.status}>
+              <option value="💤" >Minor 💤</option>
+              <option value="⏰" >Vital ⏰</option>
+              <option value="🔥" >Critical 🔥</option>
             </select>
+
+
             <div className='modalEdit-botonera'>
                 <button onClick={() => setIsEditing(!isEditing)}>Cancel <span role="img" aria-label="">⛔</span> </button>
                 <button onClick={() => updateTask(task.id)}>Apply <span role="img" aria-label="">✅</span> </button>

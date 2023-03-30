@@ -35,13 +35,13 @@ export const Card = (props) => {
   function deleteWarning(id)
   {
     setIsDiscarding(!isDiscarding)
-    let posicionCorrecta;
-    const selectedTask = props.tasks.find(todo => todo.id === id)
-    console.log(selectedTask);
+    // let posicionCorrecta;
+    // const selectedTask = props.tasks.find(todo => todo.id === id)
+    // console.log(selectedTask);
     
-    const tareas = document.querySelectorAll(".li-upper div:nth-child(1)")
-    const botones = document.querySelectorAll(".li-upper div:nth-child(2)")
-    const spans  = document.querySelectorAll(".li-upper div:nth-child(1) span:nth-child(2)")
+    // const tareas = document.querySelectorAll(".li-upper div:nth-child(1)")
+    // const botones = document.querySelectorAll(".li-upper div:nth-child(2)")
+    // const spans  = document.querySelectorAll(".li-upper div:nth-child(1) span:nth-child(2)")
     /* .textContent.split(' - ')[0] */
 
 

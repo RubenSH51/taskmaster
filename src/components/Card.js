@@ -10,7 +10,6 @@ export const Card = (props) => {
   const [task, setTask] = useState(props.task)
   const [isEditing, setIsEditing] = useState(false);
   const [isDiscarding, setIsDiscarding] = useState(false);
-  
 
   function taskStatusChange(id)
   {
@@ -24,9 +23,11 @@ export const Card = (props) => {
   function editMode(id)
   {
     setIsEditing(true);
+    //props.setShow(!props.show)
     const selectedTask = props.tasks.find(todo => todo.id === id)
     console.log(selectedTask)
 
+    
 
 
   }
@@ -44,7 +45,11 @@ export const Card = (props) => {
     /* .textContent.split(' - ')[0] */
 
 
+
   }
+
+  
+
 
 
 
@@ -104,17 +109,17 @@ export const Card = (props) => {
 
                 
             
-
+          {isEditing && 
+                    <ModalEdit 
+                      task={task}
+                      isEditing={isEditing} 
+                      setIsEditing={setIsEditing}
+                      tasks={props.tasks}
+                      setTasks={props.setTasks}
+                    />
+                  }
         </li>
-        {isEditing && 
-          <ModalEdit 
-            task={task}
-            isEditing={isEditing} 
-            setIsEditing={setIsEditing}
-            tasks={props.tasks}
-            setTasks={props.setTasks}
-          />
-        }
+        
     </>
   ) 
 }

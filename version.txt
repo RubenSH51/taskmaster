@@ -28,11 +28,13 @@ Bugs conocidos y pronto a reparar
 
 ***************************************************
 
-Datos de la nueva versión: v3.1.2
+Datos de la nueva versión: v3.1.3
 - Mejora en los botones.
-- Mejora en la eliminación individual de tareas,
-- Función editar
-
+- Mejora en la eliminación individual de tareas.
+- Función editar.
+- Modal de edición centrado.
+- Cambié el placeholder del modal de edición por un valor que se modifica con un estado.
+- Mensaje aleatorio al descargar una tarea
 
 
 ***************************************************

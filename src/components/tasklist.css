@@ -37,6 +37,11 @@ main
     border-radius: 10px;
 }
 
+.hideBTN
+{
+    top: 40px
+}
+
 main ul
 {
     padding: 40px 0;
@@ -47,11 +52,11 @@ main ul
 ul
 {
     list-style: none;
-    /* min-width: 600px; */
 }
 
 ul li
 {
+    position:relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

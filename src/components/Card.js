@@ -1,11 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import styles from "./Card.module.css"
+import { ModalEdit } from "./ModalEdit";
 
 export const Card = (props) => {
 
   //const [tasks, setTasks] = useState(props.tasks)
   const [task, setTask] = useState(props.task)
+  const [isEditing, setIsEditing] = useState(false);
   
 
   function taskStatusChange(id)
@@ -15,6 +17,16 @@ export const Card = (props) => {
     console.log(task)
     props.onTaskStatusChange(updatedTask);
     
+  }
+
+  function editMode(id)
+  {
+    setIsEditing(true);
+    const selectedTask = props.tasks.find(todo => todo.id === id)
+    console.log(selectedTask)
+
+
+
   }
 
 
@@ -38,6 +50,7 @@ export const Card = (props) => {
               </div>
               :
               <div className='cardButtonsContainer'>
+                <button className={styles.boton} onClick={() => editMode(task.id)}>Edit</button>
                 <button className={styles.boton} onClick={() => taskStatusChange(task.id)}>Complete</button>
                 <button className={styles.boton} onClick={() => props.deleteTask(task.id)}>Discard</button>
               </div>
@@ -56,6 +69,15 @@ export const Card = (props) => {
             </div>
 
         </li>
+        {isEditing && 
+          <ModalEdit 
+            task={task}
+            isEditing={isEditing} 
+            setIsEditing={setIsEditing}
+            tasks={props.tasks}
+            setTasks={props.setTasks}
+          />
+        }
     </>
   )
 }

@@ -59,7 +59,7 @@ export const App = () => {
   // const [isEditing, setIsEditing] = useState(false);
 
 
-  const version = 'v2.6.1'
+  const version = 'v3.1.2'
   window.onload = () => {
 
     console.log(version)

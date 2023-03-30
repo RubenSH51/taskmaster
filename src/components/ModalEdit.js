@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./ModalEdit.css"
 
 export const ModalEdit = ({task,isEditing, setIsEditing,tasks,setTasks}) => {
+
+    const [newValue, setNewValue] = useState(task.name)
+
+
 
     function taskDate()
     {
@@ -48,11 +52,16 @@ export const ModalEdit = ({task,isEditing, setIsEditing,tasks,setTasks}) => {
         setTasks(newarray)
     }
 
+    const changingValue = (e) => 
+    {
+      setNewValue(e.target.value)
+    }
+
   return (
     <div id="modalEditBG">
         <div id="modalEditWindow">
             <h2>Task ID: {task.id}</h2>
-            <input id="taskToEdit" name="taskToEdit" autoComplete='off'  placeholder={task.name}/>
+            <input id="taskToEdit" name="taskToEdit" autoComplete='off' onChange={changingValue} value={newValue}/>
             <select>
                 <option value={'💤'}>Minor 💤</option>
                 <option value={'⏰'}>Vital ⏰</option>

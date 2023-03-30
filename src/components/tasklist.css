@@ -172,10 +172,15 @@ li .li-upper button
 .cardButtonsContainer
 {
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 .cardButtonsContainer button:nth-child(1)
+{
+    background-color: #a5af1c;
+}
+
+.cardButtonsContainer button:nth-child(2)
 {
     background-color: #1d781d;
 }
@@ -184,13 +189,18 @@ li .li-upper button
 {
     background-color: transparent;
     color: #1d781d;
-    outline: 1px solid #1d781d;
+    /* outline: 1px solid #1d781d; */
+}
+.cardButtonsContainer button:nth-child(2):hover
+{
+    background-color: transparent;
 }
 
 
 .cardButtonsContainer button:nth-child(1)#undoBTN
 {
     background-color: #cf8120;
+    width: 100px;
 }
 
 .cardButtonsContainer button:nth-child(1)#undoBTN:hover
@@ -199,6 +209,8 @@ li .li-upper button
     color: #cf8120;
     outline: 1px solid #cf8120;
 }
+
+
 
 
 .filter-selected
@@ -210,11 +222,28 @@ li .li-upper button
 
 
 
+.uSure
+{
+    text-align: right;
+    font-weight: bolder;
+    color:white;
+}
 
+.uSureBTN 
+{
+    width: 80px;
+    height: 40px;
+}
 
+.uSureBTN1
+{
 
+}
 
+.uSureBTN2
+{
 
+}
 
 
 
@@ -270,6 +299,26 @@ li .li-upper button
     main ul li .li-upper .cardButtonsContainer button
     {
         width: 50%;
+    }
+
+    #modalDiscardWindow
+    {
+        flex-direction: column;
+    }
+    #modalDiscardWindow h2
+    {
+        margin-bottom: 20px;
+    }
+
+    .modalDiscard-botonera
+    {
+        width: 80%;
+    }
+
+    .modalDiscard-botonera button
+    {
+        width: 50%;
+
     }
 
 }

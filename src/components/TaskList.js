@@ -5,7 +5,7 @@ import { Card } from "./Card"
 //import { BoxContainer } from './BoxContainer';
 import "./tasklist.css"
 
-export const TaskList = ({tasks,setTasks, onTaskStatusChange,modalActivado, setModalActivado}) => {
+export const TaskList = ({tasks,setTasks, onTaskStatusChange,modalActivado, setModalActivado/*, isEditing, setIsEditing*/}) => {
 
   //const [show, setShow] = useState(true); // setShow nunca se usa, lo que hace que el crear un estado parezca inutil.
   const show = true // Esto lo hago para no borrar el estado ya que quizás lo uso más adelante
@@ -44,15 +44,30 @@ export const TaskList = ({tasks,setTasks, onTaskStatusChange,modalActivado, setM
           ))}  */}
            {
               tasksFilterOption==="Completed" && show && tasks.filter(task => task.completed === true).map((task) => (
-              <Card key={ task.id} task={task} deleteTask={deleteTask} onTaskStatusChange={onTaskStatusChange}/>
+              <Card key={ task.id} 
+              // isEditing={isEditing} 
+              // setIsEditing={setIsEditing}
+              tasks={tasks}
+              setTasks={setTasks}
+              task={task} deleteTask={deleteTask} onTaskStatusChange={onTaskStatusChange}/>
           ))}
           {
               tasksFilterOption==="Pending" && show && tasks.filter(task => task.completed === false).map((task) => (
-              <Card key={ task.id} task={task} deleteTask={deleteTask} onTaskStatusChange={onTaskStatusChange}/>
+              <Card key={ task.id} 
+              // isEditing={isEditing} 
+              // setIsEditing={setIsEditing}
+              tasks={tasks}
+              setTasks={setTasks}
+              task={task} deleteTask={deleteTask} onTaskStatusChange={onTaskStatusChange}/>
           ))}
           {
               tasksFilterOption==="All" && show && tasks.map((task) => (
-              <Card key={ task.id} task={task} deleteTask={deleteTask} onTaskStatusChange={onTaskStatusChange}/>
+              <Card key={ task.id} 
+              // isEditing={isEditing} 
+              // setIsEditing={setIsEditing}
+              tasks={tasks}
+              setTasks={setTasks}
+              task={task} deleteTask={deleteTask} onTaskStatusChange={onTaskStatusChange}/>
           ))} 
 
 

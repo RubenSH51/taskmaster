@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./AddTask.css"
 
-export const AddTask = ({tasks,setTasks}) => {
+export const AddTask = ({tasks,setTasks, isEditing, setIsEditing}) => {
 
     const [newTask, setNewTask] = useState("");
     const [taskProgress, setTaskProgress] = useState('💤')
@@ -31,7 +31,6 @@ export const AddTask = ({tasks,setTasks}) => {
 
     function handleSubmit(e)
     {
-      
       e.preventDefault();
       if (newTask.length<2)
       {
@@ -85,6 +84,7 @@ export const AddTask = ({tasks,setTasks}) => {
 
   return (
     <section className="addtask">
+
         <form onSubmit={handleSubmit}> 
             {/* <label htmlFor='task'>Task name:</label> */}
             <input id="task" name="task" autoComplete='off'  placeholder='new task' onChange={handleChange} value={newTask}/>
@@ -99,6 +99,7 @@ export const AddTask = ({tasks,setTasks}) => {
               {/* <button className="reset" type="button" onClick={clearTasks}>Clear <span role="img" aria-label="">🧹</span></button> */}
             </div>
         </form>
+        
     </section>
   )
 }

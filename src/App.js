@@ -56,9 +56,10 @@ export const App = () => {
   }
 
   const [modalActivado, setModalActivado] = useState(false);
+  // const [isEditing, setIsEditing] = useState(false);
 
 
-  const version = 'v2.6.1'
+  const version = 'v3.1.2'
   window.onload = () => {
 
     console.log(version)
@@ -71,13 +72,20 @@ export const App = () => {
       // <div className="App" >
       <div className={`App ${modoOscuro ? 'modo-oscuro' : 'modo-claro'}`}>
         <Header modoOscuro={modoOscuro} onModoOscuroChange={handleModoOscuroChange} version={version}/>
-        <AddTask  tasks={tasks} setTasks={setTasks}/>
+        <AddTask  
+          tasks={tasks} 
+          setTasks={setTasks}
+          // isEditing={isEditing} 
+          // setIsEditing={setIsEditing}
+        />
         <TaskList 
           tasks={tasks} 
           setTasks={setTasks} 
           onTaskStatusChange={handleTaskStatusChange}
           modalActivado={modalActivado}
           setModalActivado={setModalActivado}
+          // isEditing={isEditing} 
+          // setIsEditing={setIsEditing}
         />
         <Footer />
         {modalActivado && <Modal 

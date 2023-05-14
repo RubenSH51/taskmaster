@@ -240,7 +240,7 @@ li .li-upper button
     height: 40px;
 }
 
-.uSureBTN1
+/* .uSureBTN1
 {
 
 }
@@ -248,147 +248,155 @@ li .li-upper button
 .uSureBTN2
 {
 
+} */
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Medias */ 
+
+
+
+
+
+@media (max-width: 830px)
+{
+    main .tasksFilterButtonContainer
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    main .tasksFilterButtonContainer-upper
+    {
+        display: flex;
+    }
+
+    main .tasksFilterButtonContainer .tasksFilterButtonContainer-lower button
+    {
+        position: unset;
+        width: 100%;
+    } 
+}
+
+
+@media (max-width: 700px)
+{
+        /* >> filtros */
+
+        main .tasksFilterButtonContainer
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+    
+        main .tasksFilterButtonContainer .tasksFilterButtonContainer-upper
+        {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 15px;
+        }
+    
+        main .tasksFilterButtonContainer .tasksFilterButtonContainer-upper button
+        {
+            width: 100%;
+        } 
+    
+        main .tasksFilterButtonContainer .tasksFilterButtonContainer-lower
+        {
+            width: 100%;
+        }
+    
+        main .tasksFilterButtonContainer .tasksFilterButtonContainer-lower button
+        {
+            position: unset;
+            width: 100%;
+        } 
 }
 
 
 
 
 
-@media (max-width: 750px)
-{
-    main ul li
-    {
-        height: 140px;
-        /* display: flex;
-        flex-direction: column;
-        padding: 20px; */
 
+@media (max-width:550px)
+{
+
+
+    /* >> filtros */
+
+    main .tasksFilterButtonContainer
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    main .tasksFilterButtonContainer .tasksFilterButtonContainer-upper
+    {
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        /* grid-template-rows: repeat(4,1fr);
-        grid-template-areas:
-            ". . a"
-            "b b b"
-            "b b b"
-            ". . ."; */
-        /* gap: 2px; */
-        padding: 5px 10px 0 10px;
-        
+        gap: 15px;
+    }
 
-        height: unset;
-        grid-template-rows: 1fr 2fr 2fr;
-        grid-template-areas:
-            ". . a"
-            "b b b"
-            "b b b";
-        padding: 15px;
-        }
+    main .tasksFilterButtonContainer .tasksFilterButtonContainer-upper button
+    {
+        width: 100%;
+    } 
+
+    main .tasksFilterButtonContainer .tasksFilterButtonContainer-lower
+    {
+        width: 100%;
+    }
+
+    main .tasksFilterButtonContainer .tasksFilterButtonContainer-lower button
+    {
+        position: unset;
+        width: 100%;
+    } 
+
+
+
+
+
+
+    /* >> Alineación del contenido en las tasks */
+    
+    main ul li
+    {
+        display: grid;
+        grid-template-rows: 1fr 3fr;
+        grid-template-areas: 
+        ". . time"
+        "content content content";
+    }
 
     main ul li .li-lower
     {
-        justify-self: flex-end;
+        grid-area: time;
     }
 
     main ul li .li-upper
     {
-        flex-direction: column;
-        gap:25px;
-    }
-
-    main ul li .li-upper .cardButtonsContainer
-    {
-        /* flex-direction: column; */
-        justify-content: center;
-    }
-
-    main ul li .li-upper .cardButtonsContainer button
-    {
-        width: 50%;
-    }
-
-    #modalDiscardWindow
-    {
-        flex-direction: column;
-    }
-    #modalDiscardWindow h2
-    {
-        margin-bottom: 20px;
-    }
-
-    .modalDiscard-botonera
-    {
-        width: 80%;
-    }
-
-    .modalDiscard-botonera button
-    {
-        width: 50%;
-
-    }
-
-}
-
-
-@media (max-width: 640px)
-{
-    .li-upper > div span
-    {
-        font-size: 2.2rem;
-    }
-}
-
-
-
-@media (max-width: 560px)
-{
-    .tasksFilterButtonContainer
-    {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-    }
-
-
-    .tasksFilterButtonContainer-lower 
-    {
         display: flex;
-        justify-content: center;
-
+        flex-direction: column;
+        gap: 10px;
+        grid-area: content;
     }
 
-    .tasksFilterButtonContainer-lower .toggleBTN
+    main ul li .li-upper button
     {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        width: 320px;
-        /* display: none; */
+        width: 100%;
     }
-
-    main ul li
-    {
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: 1fr 2fr 2fr;
-        grid-template-areas:
-            ". a"
-            "b b"
-            "b b"
-            ". .";
-    }
-
-    main ul li .li-lower
-    {
-        justify-self: flex-end;
-    }
-
-    
 }
 
-@media (max-width: 490px)
-{
-    .App .addtask form
-    {
-        border: 0px solid gray;
-    }
-}
+
+
+
+
+
+
+
+

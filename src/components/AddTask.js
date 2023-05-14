@@ -4,7 +4,7 @@ import "./AddTask.css"
 export const AddTask = ({tasks,setTasks, isEditing, setIsEditing}) => {
 
     const [newTask, setNewTask] = useState("");
-    const [taskProgress, setTaskProgress] = useState('💤')
+    const [taskProgress, setTaskProgress] = useState('🔥')
     const [fecha,setFecha] = useState('')
     const [time,setTime] = useState('')
     // const [isCompleted, setIsCompleted] = useState(false)
@@ -20,7 +20,8 @@ export const AddTask = ({tasks,setTasks, isEditing, setIsEditing}) => {
     function handleReset()
     {
       setNewTask('')
-      setTaskProgress('💤')
+      setTaskProgress('🔥')
+
       
     }
 
@@ -91,9 +92,9 @@ export const AddTask = ({tasks,setTasks, isEditing, setIsEditing}) => {
             
             <div>
               <select onChange={(event) => setTaskProgress(event.target.value) } value={taskProgress}>
-                <option value={'💤'}>Minor 💤</option>
-                <option value={'⏰'}>Vital ⏰</option>
-                <option value={'🔥'}>Critical 🔥</option>
+                <option value={'🔥'}>Daily 🔥</option>
+                <option value={'⏰'}>Weekly ⏰</option>
+                <option value={'💤'}>Monthly 💤</option>
               </select>
               <button className="addtaskBTN">Add task ✔</button>
               {/* <button className="reset" type="button" onClick={clearTasks}>Clear <span role="img" aria-label="">🧹</span></button> */}

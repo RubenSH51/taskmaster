@@ -63,9 +63,9 @@ export const ModalEdit = ({task,isEditing, setIsEditing,tasks,setTasks}) => {
             <h2>Task ID: {task.id}</h2>
             <input id="taskToEdit" name="taskToEdit" autoComplete='off' onChange={changingValue} value={newValue}/>
             <select defaultValue={task.status}>
-              <option value="💤" >Minor 💤</option>
-              <option value="⏰" >Vital ⏰</option>
-              <option value="🔥" >Critical 🔥</option>
+              <option value="🔥" >Daily 🔥</option>
+              <option value="⏰" >Weekly ⏰</option>
+              <option value="💤" >Monthly 💤</option>
             </select>
 
 
